@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
@@ -10,7 +12,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable(['name', 'name_kanji', 'name_kana', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -29,4 +31,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function products(): HasMany
+{
+    return $this->hasMany(Product::class);
+}
+public function company(): BelongsTo
+{
+    return $this->belongsTo(Company::class);
+}
 }

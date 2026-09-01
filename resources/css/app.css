@@ -1,3 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* ===== ECサイト 共通 ===== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    min-height: 70vh;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th,
+td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+table img {
+    max-width: 100px;
+    height: auto;
+}
+input,
+textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin: 5px 0;
+}
+
+button {
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    padding: 7px 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f3f4f6;
+}
+
+form {
+    margin-bottom: 15px;
+}
+main form > div,
+main form > p {
+    margin-bottom: 18px;
+}
+
+textarea {
+    min-height: 120px;
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    max-width: 400px;
+}
+main img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+/* マイページ上部の情報を見やすくする */
+main > div p {
+    margin-bottom: 8px;
+}
+
+main > div {
+    margin-bottom: 20px;
+}
+
+main h3 {
+    margin-top: 32px;
+}
+/* 商品詳細・購入画面などの表示項目に余白 */
+main > p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* 画像の前後にも少し余白 */
+main > img,
+main p + img {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* 表の一番右の操作ボタンを中央にする */
+table th:last-child,
+table td:last-child {
+    text-align: center;
+}
+table td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
